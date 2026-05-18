@@ -1,1 +1,1 @@
-# Explicit-Stable-Interval-Iteration-Method
+# Explicit-Stable-Interval-Iteration-Optimizer
