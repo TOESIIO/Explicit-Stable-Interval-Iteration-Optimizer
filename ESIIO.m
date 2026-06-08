@@ -66,7 +66,7 @@ if loop > 10
         lam2 = min(1.0, 1.05 * lam2);
     end
     xnew = xval + lam2 * (xnew - xval);
-    xnew = xnew/norm(xnew, 10000);
+    xnew = xnew/norm(xnew, inf);
 else
     xnew = xval + lam2 * (xnew - xval);
 end
