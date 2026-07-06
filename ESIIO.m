@@ -49,7 +49,7 @@ sigma = (xmax(:) - xmin(:)) / 2;
 uval = (xval(:) - x_mu) ./ sigma;
 umax = min(1, uval + 2 * move); umin = max(-1, uval - 2 * move);
 % Explicit stable interval iteration
-dLdx = df0dx(:) + (1/m) * dfdx' * (lam1(:) + mu(:).*fval(:));
+dLdx = df0dx(:) + (1/m) * dfdx * (lam1(:) + mu(:).*fval(:));
 df0du = dLdx .* sigma;
 lam = norm(df0du, p/(p-1));
 unew = -sign(df0du).*(abs(df0du)/lam).^(1/(p-1));
